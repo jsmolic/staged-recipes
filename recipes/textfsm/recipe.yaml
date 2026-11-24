@@ -11,6 +11,8 @@ source:
   url: https://github.com/google/textfsm/archive/refs/tags/v${{ version }}.tar.gz
   sha256: b49bdf902fed036184fcd02aa6a97359634325421c1e5bfb088bbbf0f1aa6984
   patches:
+    # https://github.com/google/textfsm/commit/40cacbf905323e931798af097e99f4f9f3e9f1b1
+    # fix `NameError: name 'help_msg' is not defined` error
     - help-msg.patch
 
 build:
